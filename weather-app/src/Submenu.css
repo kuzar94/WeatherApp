@@ -1,0 +1,34 @@
+.submenu {
+  white-space: nowrap;
+  padding-top: 6vh;
+}
+.submenuButton {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 0px solid #000000;
+  cursor: pointer;
+  color: #414040;
+  font-size: 1.6em;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 5vh;
+}
+.submenuButton:first-child {
+  border-bottom-left-radius: 28px;
+  border-top-left-radius: 28px;
+  border-right: 2px solid #1f1f1f;
+}
+.submenuButton:last-child {
+  border-bottom-right-radius: 28px;
+  border-top-right-radius: 28px;
+  border-left: 2px solid #1f1f1f;
+}
+.submenuButton:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.submenuButton:active {
+  position: relative;
+  top: 1px;
+}
+button:focus {
+  outline: 0;
+}

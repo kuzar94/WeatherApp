@@ -1,0 +1,101 @@
+.form {
+  color: rgb(22, 22, 22);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.titleForm {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  padding-top: 4vh;
+}
+.descriptionForm {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3em;
+  padding-top: 2vh;
+  text-align: center;
+  width: 40em;
+}
+.buttonSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gmailButton,
+.fbButton,
+.submitRemove,
+.submitAdd {
+  margin-top: 2vh;
+  background-color: #cc342e;
+  border-radius: 28px;
+  border: 0px solid #18ab29;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 16px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+  width: 300px;
+}
+.fbButton {
+  background-color: #533ece;
+}
+.gmailButton:hover {
+  background-color: #a82823;
+}
+.gmailButton:active {
+  position: relative;
+  top: 1px;
+}
+.fbButton:hover {
+  background-color: #4432a5;
+}
+.fbButton:active {
+  position: relative;
+  top: 1px;
+}
+.addEmail {
+  font-size: 1.3em;
+  padding-top: 3vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.addEmail label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addEmail input[type="text"] {
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 3em;
+  margin-right: 6em;
+}
+.submitAdd {
+  margin-top: 0.5vh;
+  background-color: #14ad29;
+}
+.submitRemove {
+  margin-top: 0.5vh;
+  background-color: #414141;
+}
+.submitAdd:hover {
+  background-color: #0e851e;
+}
+.submitRemove:hover {
+  background-color: #2b2a2a;
+}
+.removeForm {
+  padding-top: 3vh;
+}

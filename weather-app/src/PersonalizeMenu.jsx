@@ -2,82 +2,43 @@ import React, { Component } from "react";
 import "./PersonalizeMenu.css";
 
 class PersonalizeMenu extends Component {
+  // FUNKCJA TA WYKONUJE FUNKCJE NADANA Z PROPSOW, I PRZESYLA W NIEJ NAZWE KONKRETNEJ DANY, ORAZ JEJ WARTOSC (czy ma checked false albo true)
+  handleClick = e => {
+    let valuePersonalizedElement = e.target.value;
+    let nrPersonalizedElement = e.target.name;
+    this.props.menuData.changePosition(
+      valuePersonalizedElement,
+      nrPersonalizedElement
+    );
+  };
   render() {
     return (
-      <div>
+      <div className="divPersonalizeMenu">
         <ul className="personalizeMenu">
-          <li>
-            <div className="textPersonalizeMenu"> Temperature</div>
-            <label className="switch">
-              <input type="checkbox" /> <div />
-            </label>
-          </li>
-          <li>
-            <div className="textPersonalizeMenu">Max temperature </div>
-            <label className="switch">
-              <input type="checkbox" /> <div />
-            </label>
-          </li>
-          <li>
-            <div className="textPersonalizeMenu"> Min temperature </div>
-            <label className="switch">
-              <input type="checkbox" /> <div />
-            </label>
-          </li>
-          <li>
-            <div className="textPersonalizeMenu"> Sensed temperature</div>
-            <label className="switch">
-              <input type="checkbox" /> <div />
-            </label>
-          </li>
-          <li>
-            <div className="textPersonalizeMenu">Condition </div>
-            <label className="switch">
-              <input type="checkbox" /> <div />
-            </label>
-          </li>
-          <li>
-            <div className="textPersonalizeMenu">Wind speed </div>
-            <label className="switch">
-              <input type="checkbox" /> <div />
-            </label>
-          </li>
-          <li>
-            <div className="textPersonalizeMenu"> Wind degree</div>
-            <label className="switch">
-              <input type="checkbox" /> <div />
-            </label>
-          </li>
-          <li>
-            <div className="textPersonalizeMenu"> Pressure </div>
-            <label className="switch">
-              <input type="checkbox" /> <div />
-            </label>
-          </li>
-          <li>
-            <div className="textPersonalizeMenu"> Humidity</div>
-            <label className="switch">
-              <input type="checkbox" /> <div />
-            </label>
-          </li>
-          <li>
-            <div className="textPersonalizeMenu">Cloudy </div>
-            <label className="switch">
-              <input type="checkbox" /> <div />
-            </label>
-          </li>
-          <li>
-            <div className="textPersonalizeMenu">Sensed temperature </div>
-            <label className="switch">
-              <input type="checkbox" /> <div />
-            </label>
-          </li>
-          <li>
-            <div className="textPersonalizeMenu"> UV </div>
-            <label className="switch">
-              <input type="checkbox" /> <div />
-            </label>
-          </li>
+          {/* TWORZE SOBIE MAPE Z WARTOSCI PROPSOW (CZYLI MOJE DANE tj, temperatura, zachmurzenie, cisnienie) */}
+          {Object.values(this.props.menuData.personalizedElements).map(
+            (values, key) => {
+              return (
+                // KAZDY LI MA SWOJ KLUCZ ORAZ TWORZE W NIM DIVA Z TEKSTEM NAZWY MOJEJ KONKRETNEJ DANY (temperatura,zachmurzenie,itp)
+                <li key={key}>
+                  <div className="textPersonalizeMenu">{values.name}</div>
+                  <label className="switch">
+                    {/* TUTAJ TWORZE INPUT TZW.CHECKBOX I NADAJE MU WARTOSCI Z OTRZYMANYCH PROPSOW */}
+                    <input
+                      ref={ref => (this.input = ref)}
+                      type="checkbox"
+                      value={values.position}
+                      checked={values.position}
+                      name={key}
+                      // NA ZMIANIE MA WYKONAWC FUNKCJE HANDLECLICK
+                      onChange={this.handleClick}
+                    />
+                    <div />
+                  </label>
+                </li>
+              );
+            }
+          )}
         </ul>
       </div>
     );

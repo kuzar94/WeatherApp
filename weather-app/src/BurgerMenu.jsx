@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "./BurgerMenu.css";
 import PersonalizeMenu from "./PersonalizeMenu";
+import Submenu from "./Submenu";
+import Form from "./Form";
+import Help from "./Help";
+
 class BurgerMenu extends Component {
   render() {
     return (
@@ -12,7 +16,8 @@ class BurgerMenu extends Component {
             <span />
             <span />
             <div id="menu">
-              <PersonalizeMenu />
+              <Submenu />
+              <PersonalizeMenu menuData={this.props} />
             </div>
           </div>
         </nav>
