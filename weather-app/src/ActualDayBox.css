@@ -1,17 +1,26 @@
 .cityActualBox {
   text-align: center;
   color: rgb(220, 227, 228);
-  font-size: 2em;
   display: block;
   height: 2vh;
   user-select: none;
 }
+.cityActualBox input {
+  font-size: 2em;
+  text-align: center;
+  background-color: rgba(1, 1, 1, 0);
+  border: none;
+  color: rgb(220, 227, 228);
+  text-transform: uppercase;
+  pointer-events: none;
+}
 .panelActualBox {
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20%;
   height: 44vh;
   display: flex;
   position: relative;
-  justify-content: center;
   align-items: center;
   user-select: none;
 }
@@ -35,10 +44,36 @@
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
+  white-space: nowrap;
+}
+.column3 ul {
+  column-count: 2;
+}
+.column3 ul li {
+  width: 105%;
+  padding-right: 10px;
+  font-size: 0.8em;
+}
+.column2 ul {
+  column-count: 2;
+  column-gap: 13%;
+}
+.column2 ul li {
+  width: 120%;
+}
+.column1 ul {
+  column-count: 1;
+}
+.column1 ul li {
+  width: 60%;
 }
 .listDivActualBox ul {
   color: rgb(220, 227, 228);
 }
 .listActualBox {
   color: black;
+}
+.listDivActualBox ul li {
+  display: flex;
+  justify-content: space-between;
 }

@@ -9,11 +9,22 @@ class DayBox extends Component {
         <div className="imageBox" />
         <div className="listDataBox">
           <ul>
-            <li>Temperature: 23 °C</li>
-            <li>Pressure: 1040 hPa</li>
-            <li>Wind: 9,4 km/h</li>
-            <li>Humidity: 78%</li>
-            <li>Cloudy: 75%</li>
+            {Object.values(this.props.menuData.personalizedElements).map(
+              (values, key) => {
+                if (
+                  values.name === "Max temperature" ||
+                  values.name === "Min temperature" ||
+                  values.name === "Cloudy"
+                ) {
+                  return (
+                    <li key={key}>
+                      <div className="dayBoxName">{values.name}</div>
+                      <div className="dayBoxValue">40%</div>
+                    </li>
+                  );
+                }
+              }
+            )}
           </ul>
         </div>
         <div className="icons">

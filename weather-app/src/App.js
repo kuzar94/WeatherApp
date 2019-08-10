@@ -51,7 +51,11 @@ class App extends Component {
         name: "UV",
         position: false
       }
-    }
+    },
+    city: "Gdansk"
+  };
+  changeCity = changedCity => {
+    this.setState({ city: changedCity });
   };
   changePositionPersonalizeMenu = (
     valuePersonalizedElement,
@@ -69,7 +73,6 @@ class App extends Component {
     }
     this.setState({ personalizedElements: changedPositionPersonalizeMenu });
   };
-  componentDidUpdate() {}
 
   render() {
     return (
@@ -77,9 +80,13 @@ class App extends Component {
         <BurgerMenu
           personalizedElements={this.state.personalizedElements}
           changePosition={this.changePositionPersonalizeMenu}
+          changeCity={this.changeCity}
         />
-        <ActualDayBox />
-        <CarouselDiv />
+        <ActualDayBox
+          personalizedElements={this.state.personalizedElements}
+          cityName={this.state.city}
+        />
+        <CarouselDiv personalizedElements={this.state.personalizedElements} />
       </div>
     );
   }

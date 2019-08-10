@@ -1,11 +1,29 @@
 import React, { Component } from "react";
 import "./BurgerMenu.css";
-import PersonalizeMenu from "./PersonalizeMenu";
 import Submenu from "./Submenu";
+import PersonalizeMenu from "./PersonalizeMenu";
 import Form from "./Form";
 import Help from "./Help";
 
 class BurgerMenu extends Component {
+  state = {
+    burgerMenuStatus: "Personalize"
+  };
+  changeBurgerMenuStatus = changedBurgerMenu => {
+    this.setState({ burgerMenuStatus: changedBurgerMenu });
+  };
+  returnBurgerStatus = () => {
+    switch (this.state.burgerMenuStatus) {
+      case "Personalize":
+        return <PersonalizeMenu menuData={this.props} />;
+      case "Send yourself a message":
+        return <Form />;
+      case "Help":
+        return <Help />;
+      default:
+        return null;
+    }
+  };
   render() {
     return (
       <div>
@@ -16,8 +34,8 @@ class BurgerMenu extends Component {
             <span />
             <span />
             <div id="menu">
-              <Submenu />
-              <PersonalizeMenu menuData={this.props} />
+              <Submenu changeBurgerMenuStatus={this.changeBurgerMenuStatus} />
+              {this.returnBurgerStatus()}
             </div>
           </div>
         </nav>

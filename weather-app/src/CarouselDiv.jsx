@@ -25,12 +25,12 @@ class Gallery extends React.Component {
           infinite={false}
           dotsDisabled={true}
         >
-          <DayBox />
-          <DayBox />
-          <DayBox />
-          <DayBox />
-          <DayBox />
-          <DayBox />
+          <DayBox menuData={this.props} />
+          <DayBox menuData={this.props} />
+          <DayBox menuData={this.props} />
+          <DayBox menuData={this.props} />
+          <DayBox menuData={this.props} />
+          <DayBox menuData={this.props} />
         </AliceCarousel>
       </div>
     );

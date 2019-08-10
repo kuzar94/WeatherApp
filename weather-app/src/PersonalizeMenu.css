@@ -1,3 +1,20 @@
+.personalizeCityDiv {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+  margin-top: -1vh;
+}
+.personalizeCityDiv input {
+  border: 0px;
+  border-radius: 20px;
+  text-align: center;
+  outline: none;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.7);
+}
 .personalizeMenu li {
   display: flex;
   justify-content: space-between;
@@ -11,7 +28,8 @@
   height: 89vh;
   display: flex;
   justify-content: center;
-  padding-top: 8vh;
+  padding-top: 1vh;
+  flex-direction: column;
 }
 .switch {
   display: inline-block;
@@ -20,6 +38,7 @@
   width: 2em;
   background: rgb(236, 236, 236);
   border-radius: 1em;
+  cursor: pointer;
 }
 
 .switch div {
@@ -32,6 +51,7 @@
   -moz-transition: all 300ms;
   transition: all 300ms;
   background-color: rgb(129, 129, 129);
+  cursor: pointer;
 }
 
 .switch input:checked + div {
@@ -39,4 +59,8 @@
   -moz-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0);
   background-color: rgb(47, 161, 133);
+  cursor: pointer;
+}
+.switch input {
+  cursor: pointer;
 }
