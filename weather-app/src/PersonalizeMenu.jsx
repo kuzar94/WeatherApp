@@ -14,6 +14,7 @@ class PersonalizeMenu extends Component {
   handleOnChange = e => {
     const changedCity = e.target.value;
     this.props.menuData.changeCity(changedCity);
+    this.props.menuData.getWeather();
   };
   render() {
     return (

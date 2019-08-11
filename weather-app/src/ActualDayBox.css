@@ -34,10 +34,12 @@
 .imageActualBox {
   width: 12em;
   height: 12em;
-  background-image: url("./assets/moon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.sunny {
+  background-image: url("./assets/moon.svg");
 }
 .listDivActualBox {
   display: flex;
@@ -76,4 +78,14 @@
 .listDivActualBox ul li {
   display: flex;
   justify-content: space-between;
+}
+.actualBoxValue {
+  color: #e76244;
+}
+.noData {
+  height: 46vh;
+  display: block;
+  text-align: center;
+  font-size: 3em;
+  color: rgb(255, 0, 0);
 }

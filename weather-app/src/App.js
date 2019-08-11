@@ -4,23 +4,29 @@ import ActualDayBox from "./ActualDayBox";
 import BurgerMenu from "./BurgerMenu";
 import "./App.css";
 
+const API_KEY = "b4a3127ec4104f91b38103456192707";
+
 class App extends Component {
+  componentDidMount() {
+    this.getWeather();
+  }
+
   state = {
     personalizedElements: {
       a0: {
-        name: "Temperature",
+        name: "Temperature °C",
         position: true
       },
       a1: {
-        name: "Max temperature",
+        name: "Max temperature °C",
         position: true
       },
       a2: {
-        name: "Min temperature",
+        name: "Min temperature °C",
         position: true
       },
       a3: {
-        name: "Sensed temperature",
+        name: "Sensed temperature °C",
         position: true
       },
       a4: {
@@ -28,7 +34,7 @@ class App extends Component {
         position: true
       },
       a5: {
-        name: "Wind speed",
+        name: "Wind speed km/h",
         position: false
       },
       a6: {
@@ -36,11 +42,11 @@ class App extends Component {
         position: false
       },
       a7: {
-        name: "Pressure",
+        name: "Pressure hpa",
         position: false
       },
       a8: {
-        name: "Humidity",
+        name: "Humidity %",
         position: false
       },
       a9: {
@@ -52,7 +58,9 @@ class App extends Component {
         position: false
       }
     },
-    city: "Gdansk"
+    city: "Lipusz",
+    actualData: undefined,
+    forecastData: undefined
   };
   changeCity = changedCity => {
     this.setState({ city: changedCity });
@@ -73,7 +81,17 @@ class App extends Component {
     }
     this.setState({ personalizedElements: changedPositionPersonalizeMenu });
   };
-
+  getWeather = async () => {
+    const api_call = await fetch(
+      `https://api.apixu.com/v1/forecast.json?key=${API_KEY}&q=${
+        this.state.city
+      }&days=7`
+    );
+    const data = await api_call.json();
+    this.setState({ actualData: data.current });
+    this.setState({ forecastData: data.forecast });
+    console.log(this.state.actualData);
+  };
   render() {
     return (
       <div className="weatherBoxes">
@@ -81,12 +99,17 @@ class App extends Component {
           personalizedElements={this.state.personalizedElements}
           changePosition={this.changePositionPersonalizeMenu}
           changeCity={this.changeCity}
+          getWeather={this.getWeather}
         />
         <ActualDayBox
           personalizedElements={this.state.personalizedElements}
           cityName={this.state.city}
+          actualData={this.state.actualData}
         />
-        <CarouselDiv personalizedElements={this.state.personalizedElements} />
+        <CarouselDiv
+          personalizedElements={this.state.personalizedElements}
+          forecastData={this.state.forecastData}
+        />
       </div>
     );
   }

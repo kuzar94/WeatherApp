@@ -12,8 +12,8 @@ class DayBox extends Component {
             {Object.values(this.props.menuData.personalizedElements).map(
               (values, key) => {
                 if (
-                  values.name === "Max temperature" ||
-                  values.name === "Min temperature" ||
+                  values.name === "Max temperature °C" ||
+                  values.name === "Min temperature °C" ||
                   values.name === "Cloudy"
                 ) {
                   return (

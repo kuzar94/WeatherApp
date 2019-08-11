@@ -46,7 +46,8 @@
   justify-content: center;
 }
 .dayBoxName {
-  width: 50%;
+  width: 55%;
+  white-space: nowrap;
 }
 .dayBoxValue {
   width: 20%;
