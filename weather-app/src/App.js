@@ -58,9 +58,10 @@ class App extends Component {
         position: false
       }
     },
-    city: "Lipusz",
+    city: "wrexham",
     actualData: undefined,
-    forecastData: undefined
+    forecastData: undefined,
+    cityData: "undefined"
   };
   changeCity = changedCity => {
     this.setState({ city: changedCity });
@@ -90,7 +91,7 @@ class App extends Component {
     const data = await api_call.json();
     this.setState({ actualData: data.current });
     this.setState({ forecastData: data.forecast });
-    console.log(this.state.actualData);
+    this.setState({ cityData: data.location });
   };
   render() {
     return (
@@ -105,6 +106,7 @@ class App extends Component {
           personalizedElements={this.state.personalizedElements}
           cityName={this.state.city}
           actualData={this.state.actualData}
+          cityName={this.state.cityData}
         />
         <CarouselDiv
           personalizedElements={this.state.personalizedElements}

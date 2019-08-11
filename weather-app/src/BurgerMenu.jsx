@@ -24,12 +24,19 @@ class BurgerMenu extends Component {
         return null;
     }
   };
+  handleClick = () => {
+    this.props.getWeather();
+  };
   render() {
     return (
       <div>
         <nav role="navigation">
           <div id="menuToggle">
-            <input type="checkbox" id="menuCheckbox" />
+            <input
+              type="checkbox"
+              id="menuCheckbox"
+              onClick={this.handleClick}
+            />
             <span />
             <span />
             <span />

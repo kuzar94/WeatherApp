@@ -29,7 +29,6 @@
   margin-right: auto;
   width: 17vh;
   height: 17vh;
-  background-image: url("./assets/sun.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -51,6 +50,7 @@
 }
 .dayBoxValue {
   width: 20%;
+  text-align: right;
 }
 .icons {
   display: flex;

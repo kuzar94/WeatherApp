@@ -5,7 +5,7 @@ import Sun from "./assets/sun.svg";
 import Cloud from "./assets/cloud.svg";
 import Rain from "./assets/rain.svg";
 import Snow from "./assets/snow.svg";
-import Drizzle from "./assets/drizzle.svg";
+import Haze from "./assets/haze.svg";
 import Thunder from "./assets/thunder.svg";
 import Blizzard from "./assets/blizzard.svg";
 
@@ -37,7 +37,7 @@ class ActualDayBox extends Component {
         conditionState.includes("mist") ||
         conditionState.includes("fog")
       ) {
-        this.setState({ image: Drizzle });
+        this.setState({ image: Haze });
       } else if (conditionState.includes("thunder")) {
         this.setState({ image: Thunder });
       } else if (conditionState.includes("blizzard")) {
@@ -104,6 +104,7 @@ class ActualDayBox extends Component {
                   break;
                 default:
                   apiNameData = "Error";
+                  break;
               }
               return (
                 <li key={key}>
@@ -118,7 +119,10 @@ class ActualDayBox extends Component {
     );
   };
   render() {
-    if (this.props.actualData === undefined) {
+    if (
+      this.props.actualData === undefined ||
+      this.props.cityName == undefined
+    ) {
       return <div className="noData">No data, wait or try again later</div>;
     } else {
       let imageType = {
@@ -127,7 +131,7 @@ class ActualDayBox extends Component {
       return (
         <div className="actualDayBox">
           <div className="cityActualBox">
-            <input type="text" name="name" value={this.props.cityName} />
+            <input type="text" name="name" value={this.props.cityName.name} />
           </div>
           <div className="panelActualBox">
             <div className="imageDivActualBox">
