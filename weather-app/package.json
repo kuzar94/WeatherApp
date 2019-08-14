@@ -8,7 +8,9 @@
     "react-items-carousel": "^2.3.7",
     "react-multi-carousel": "^2.2.1",
     "react-scripts": "3.0.1",
-    "reset-css": "^4.0.1"
+    "react-slick": "^0.25.2",
+    "reset-css": "^4.0.1",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

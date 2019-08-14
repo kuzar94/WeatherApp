@@ -73,7 +73,6 @@ class ActualDayBox extends Component {
                   break;
                 case "Max temperature °C":
                   apiNameData = Math.round(this.props.actualData.temp_c + 3);
-
                   break;
                 case "Min temperature °C":
                   apiNameData = Math.round(this.props.actualData.temp_c - 3);
@@ -121,7 +120,7 @@ class ActualDayBox extends Component {
   render() {
     if (
       this.props.actualData === undefined ||
-      this.props.cityName == undefined
+      this.props.cityName === undefined
     ) {
       return <div className="noData">No data, wait or try again later</div>;
     } else {

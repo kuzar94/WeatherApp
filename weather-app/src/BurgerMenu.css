@@ -9,10 +9,10 @@
 }
 #menuCheckbox {
   display: block;
-  width: 40px;
-  height: 40px;
-  margin-left: -3px;
-  margin-top: -3px;
+  width: 50px;
+  height: 50px;
+  margin-left: -11px;
+  margin-top: -13px;
   position: absolute;
   cursor: pointer;
   opacity: 0;
@@ -50,11 +50,6 @@
 #menuCheckbox:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
-/*
-     * Make this absolute positioned
-     * at the top left of the screen
-     */
-
 #menuCheckbox:checked ~ div {
   transform: none;
 }
@@ -62,10 +57,6 @@
   position: absolute;
   opacity: 0;
 }
-
-/**
- * 1. Adjust this to size
- */
 #menu {
   position: absolute;
   width: 100vw;
@@ -80,4 +71,22 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+@media (max-width: 576px) {
+  #menuToggle {
+    top: 50px;
+    left: 50px;
+  }
+  #menuCheckbox {
+    margin-top: -45px;
+    left: -40px;
+  }
+  #menuToggle span {
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    margin-left: -30px;
+    top: -30px;
+  }
 }

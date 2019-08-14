@@ -1,11 +1,10 @@
 .personalizeCityDiv {
-  font-size: 2em;
+  font-size: 4vh;
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
   margin-bottom: 3vh;
-  margin-top: -1vh;
 }
 .personalizeCityDiv input {
   border: 0px;
@@ -14,36 +13,39 @@
   outline: none;
   text-transform: uppercase;
   background-color: rgba(255, 255, 255, 0.7);
+  width: 21vw;
+  font-size: 2.5vh;
 }
 .personalizeMenu li {
   display: flex;
   justify-content: space-between;
-  font-size: 1.4em;
+  font-size: 3vh;
   height: 6vh;
   color: rgb(22, 22, 22);
-  width: 25vw;
+  width: 26vw;
 }
 
 .divPersonalizeMenu {
   height: 89vh;
   display: flex;
   justify-content: center;
-  padding-top: 1vh;
   flex-direction: column;
 }
 .switch {
   display: inline-block;
   font-size: 20px; /* 1 */
-  height: 1em;
-  width: 2em;
+  height: 2.3vh;
+  width: 9%;
+  min-width: 2em;
   background: rgb(236, 236, 236);
   border-radius: 1em;
   cursor: pointer;
 }
 
 .switch div {
-  height: 1em;
-  width: 1em;
+  height: 2.3vh;
+  width: 50%;
+  min-width: 1em;
   border-radius: 1em;
   background: rgb(236, 236, 236);
   box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
@@ -63,4 +65,36 @@
 }
 .switch input {
   cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .personalizeCityDiv input {
+    width: 26vw;
+  }
+  .personalizeMenu li {
+    width: 34vw;
+  }
+}
+@media (max-width: 992px) {
+  .personalizeCityDiv input {
+    width: 30vw;
+  }
+  .personalizeMenu li {
+    width: 36vw;
+  }
+}
+@media (max-width: 768px) {
+  .personalizeCityDiv input {
+    width: 35vw;
+  }
+  .personalizeMenu li {
+    width: 45vw;
+  }
+}
+@media (max-width: 576px) {
+  .personalizeCityDiv input {
+    width: 65vw;
+  }
+  .personalizeMenu li {
+    width: 80vw;
+  }
 }

@@ -19,7 +19,7 @@ class PersonalizeMenu extends Component {
     return (
       <div className="divPersonalizeMenu">
         <div className="personalizeCityDiv">
-          City:
+          City
           <input
             autoComplete="off"
             ref={ref => (this.input = ref)}

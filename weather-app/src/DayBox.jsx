@@ -13,21 +13,10 @@ class DayBox extends Component {
   state = {
     image: undefined
   };
-  componentDidMount() {
-    console.log("uruchamiam Daybox");
+  componentWillReceiveProps() {
     if (this.props.forecastData === undefined) {
-      console.log("odebranoNIC");
       return undefined;
     } else {
-      console.log("----box----");
-      console.log(
-        "data = " +
-          this.props.forecastData.date +
-          "temp = " +
-          this.props.forecastData.day.maxtemp_c
-      );
-      console.log("___");
-
       let conditionState = this.props.forecastData.day.condition.text.toLowerCase();
       if (conditionState.includes("clear")) {
         this.setState({ image: Moon }, function() {});

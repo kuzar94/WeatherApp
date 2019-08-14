@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import CarouselDiv from "./CarouselDiv";
 import ActualDayBox from "./ActualDayBox";
 import BurgerMenu from "./BurgerMenu";
 import "./App.css";
+import Gallery from "./Gallery";
 
 const API_KEY = "b4a3127ec4104f91b38103456192707";
 
@@ -58,7 +58,7 @@ class App extends Component {
         position: false
       }
     },
-    city: "wrexham",
+    city: "Gdansk",
     actualData: undefined,
     forecastData: undefined,
     cityData: "undefined"
@@ -108,7 +108,7 @@ class App extends Component {
           actualData={this.state.actualData}
           cityName={this.state.cityData}
         />
-        <CarouselDiv
+        <Gallery
           personalizedElements={this.state.personalizedElements}
           forecastData={this.state.forecastData}
         />

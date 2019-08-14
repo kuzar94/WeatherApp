@@ -1,0 +1,40 @@
+.help {
+  width: 30vw;
+}
+.titleHelp {
+  margin-top: 5vh;
+  font-size: 4.5vh;
+  text-align: center;
+}
+.help .question {
+  font-size: 3vh;
+  padding-top: 1vh;
+  font-weight: bold;
+}
+.help .answer {
+  font-size: 2.5vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  font-weight: 100;
+  text-align: justify;
+}
+@media (max-width: 1200px) {
+  .help {
+    width: 40vw;
+  }
+}
+@media (max-width: 992px) {
+  .help {
+    width: 50vw;
+  }
+}
+@media (max-width: 768px) {
+  .help {
+    width: 60vw;
+  }
+}
+@media (max-width: 576px) {
+  .help {
+    width: 70vw;
+  }
+}

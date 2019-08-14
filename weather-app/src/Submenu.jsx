@@ -19,14 +19,7 @@ class Submenu extends Component {
           type="button"
           ref={ref => (this.input = ref)}
           className="submenuInput"
-          value={"Send yourself a message"}
-          onClick={this.handleOnClick}
-        />
-        <input
-          type="button"
-          ref={ref => (this.input = ref)}
-          className="submenuInput"
-          value={"Help"}
+          value={"FAQ"}
           onClick={this.handleOnClick}
         />
       </div>

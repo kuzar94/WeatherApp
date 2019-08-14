@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import "./BurgerMenu.css";
 import Submenu from "./Submenu";
 import PersonalizeMenu from "./PersonalizeMenu";
-import Form from "./Form";
-import Help from "./Help";
+import FAQ from "./FAQ";
 
 class BurgerMenu extends Component {
   state = {
@@ -16,10 +15,8 @@ class BurgerMenu extends Component {
     switch (this.state.burgerMenuStatus) {
       case "Personalize":
         return <PersonalizeMenu menuData={this.props} />;
-      case "Send yourself a message":
-        return <Form />;
-      case "Help":
-        return <Help />;
+      case "FAQ":
+        return <FAQ />;
       default:
         return null;
     }

@@ -1,59 +1,59 @@
+.actualDayBox {
+  height: 46vh;
+}
 .cityActualBox {
   text-align: center;
   color: rgb(220, 227, 228);
   display: block;
-  height: 2vh;
+  height: 4vh;
   user-select: none;
+  width: 100%;
 }
 .cityActualBox input {
-  font-size: 2em;
+  height: 4vh;
+  font-size: 4vh;
   text-align: center;
-  background-color: rgba(1, 1, 1, 0);
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   color: rgb(220, 227, 228);
   text-transform: uppercase;
   pointer-events: none;
 }
 .panelActualBox {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20%;
-  height: 44vh;
+  height: 39vh;
   display: flex;
-  position: relative;
   align-items: center;
   user-select: none;
 }
-
 .imageDivActualBox {
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20%;
 }
 .imageActualBox {
-  width: 12em;
-  height: 12em;
+  width: 25vh;
+  height: 25vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-left: 20%;
 }
-.sunny {
-  background-image: url("./assets/moon.svg");
-}
+
 .listDivActualBox {
+  display: flex;
+  font-size: 1.7vw;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
-  white-space: nowrap;
 }
 .column3 ul {
   column-count: 2;
 }
 .column3 ul li {
   width: 105%;
-  padding-right: 10px;
+  margin-right: 10px;
   font-size: 0.8em;
 }
 .column2 ul {
@@ -72,9 +72,6 @@
 .listDivActualBox ul {
   color: rgb(220, 227, 228);
 }
-.listActualBox {
-  color: black;
-}
 .listDivActualBox ul li {
   display: flex;
   justify-content: space-between;
@@ -88,4 +85,42 @@
   text-align: center;
   font-size: 3em;
   color: rgb(255, 0, 0);
+}
+@media (max-width: 1046px) {
+  .listDivActualBox {
+    font-size: 1.6vw;
+  }
+}
+@media (max-width: 872px) {
+  .listDivActualBox {
+    font-size: 1.4vw;
+  }
+}
+@media (max-width: 768px) {
+  .listDivActualBox {
+    font-size: 1.7vw;
+  }
+}
+@media (max-width: 698px) {
+  .listDivActualBox {
+    font-size: 2vh;
+  }
+  .column3 ul {
+    column-count: 2;
+  }
+  .column2 ul {
+    column-count: 1;
+  }
+}
+@media (max-width: 520px) {
+  .imageActualBox {
+    width: 20vh;
+    height: 20vh;
+  }
+}
+@media (max-width: 400px) {
+  .imageActualBox {
+    width: 15vh;
+    height: 15vh;
+  }
 }

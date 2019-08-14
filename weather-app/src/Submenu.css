@@ -9,11 +9,10 @@
   border: 0px solid #000000;
   cursor: pointer;
   color: #414040;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 1.6em;
+  font-size: 3vh;
   height: 5vh;
   text-align: center;
+  width: 13vw;
 }
 .submenuInput:focus {
   box-shadow: none;
@@ -40,4 +39,30 @@ input[type="text"]:focus {
 }
 input:focus {
   outline: 0;
+}
+@media (max-width: 1200px) {
+  .submenuInput {
+    width: 17vw;
+  }
+}
+@media (max-width: 992px) {
+  .submenuInput {
+    width: 19vw;
+  }
+}
+@media (max-width: 768px) {
+  .submenuInput {
+    width: 23vw;
+  }
+}
+@media (max-width: 576px) {
+  .submenuInput {
+    width: 27vw;
+  }
+}
+@media (max-width: 300px) {
+  .submenuInput {
+    width: 20vw;
+    font-size: 2vh;
+  }
 }
