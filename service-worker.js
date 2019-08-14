@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kuzar94/WeatherApp/tree/master/weather-app/precache-manifest.940b14f2f1c090f18c130b6d0b1a56db.js"
+  "/kuzar94/WeatherApp/tree/master/weather-app.io/precache-manifest.50f8fbd39afcd42516d8a9d4f8bbd413.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -33,7 +33,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/kuzar94/WeatherApp/tree/master/weather-app/index.html"), {
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/kuzar94/WeatherApp/tree/master/weather-app.io/index.html"), {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
