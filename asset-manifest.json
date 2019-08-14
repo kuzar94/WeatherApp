@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/weatherAppWebsite.github.io/weather/static/css/main.45ee9ce3.chunk.css",
+    "main.js": "/weatherAppWebsite.github.io/weather/static/js/main.28ff0e87.chunk.js",
+    "main.js.map": "/weatherAppWebsite.github.io/weather/static/js/main.28ff0e87.chunk.js.map",
+    "runtime~main.js": "/weatherAppWebsite.github.io/weather/static/js/runtime~main.90d6575b.js",
+    "runtime~main.js.map": "/weatherAppWebsite.github.io/weather/static/js/runtime~main.90d6575b.js.map",
+    "static/css/2.2d82b667.chunk.css": "/weatherAppWebsite.github.io/weather/static/css/2.2d82b667.chunk.css",
+    "static/js/2.e4c54c89.chunk.js": "/weatherAppWebsite.github.io/weather/static/js/2.e4c54c89.chunk.js",
+    "static/js/2.e4c54c89.chunk.js.map": "/weatherAppWebsite.github.io/weather/static/js/2.e4c54c89.chunk.js.map",
+    "index.html": "/weatherAppWebsite.github.io/weather/index.html",
+    "precache-manifest.a95f1b5b61922e7d16d441f69b3d9d94.js": "/weatherAppWebsite.github.io/weather/precache-manifest.a95f1b5b61922e7d16d441f69b3d9d94.js",
+    "service-worker.js": "/weatherAppWebsite.github.io/weather/service-worker.js",
+    "static/css/2.2d82b667.chunk.css.map": "/weatherAppWebsite.github.io/weather/static/css/2.2d82b667.chunk.css.map",
+    "static/css/main.45ee9ce3.chunk.css.map": "/weatherAppWebsite.github.io/weather/static/css/main.45ee9ce3.chunk.css.map",
+    "static/media/blizzard.svg": "/weatherAppWebsite.github.io/weather/static/media/blizzard.d565bfd1.svg",
+    "static/media/cloud.svg": "/weatherAppWebsite.github.io/weather/static/media/cloud.0613f897.svg",
+    "static/media/drizzle.svg": "/weatherAppWebsite.github.io/weather/static/media/drizzle.f64853ff.svg",
+    "static/media/haze.svg": "/weatherAppWebsite.github.io/weather/static/media/haze.64e8bd51.svg",
+    "static/media/DayBox.css": "/weatherAppWebsite.github.io/weather/static/media/wind.d2048711.svg",
+    "static/media/moon.svg": "/weatherAppWebsite.github.io/weather/static/media/moon.c645594f.svg",
+    "static/media/rain.svg": "/weatherAppWebsite.github.io/weather/static/media/rain.c85aa2af.svg",
+    "static/media/slick-theme.css": "/weatherAppWebsite.github.io/weather/static/media/slick.f97e3bbf.svg",
+    "static/media/snow.svg": "/weatherAppWebsite.github.io/weather/static/media/snow.10d1bd9a.svg",
+    "static/media/sun.svg": "/weatherAppWebsite.github.io/weather/static/media/sun.f11bc025.svg",
+    "static/media/thunder.svg": "/weatherAppWebsite.github.io/weather/static/media/thunder.6aa163d2.svg"
+  }
+}
